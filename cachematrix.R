@@ -1,8 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This program caches the inverse of a matrix--it contains two methods:
+## one that creates a special "matrix" object that can cache its inverse and
+## one that computes  it if it hasn't been cached.
 
-## Write a short comment describing this function
-
+## contains getter and setter methods for the matrix x and its inverse, m.
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         set <- function(y) {
@@ -10,7 +10,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 m <<- NULL
         }
         get <- function() x
-        setmean <- function(mean) m <<- mean
+        setmean <- function(inverse) m <<- inverse
         getmean <- function() m
         list(set = set, get = get,
              setmean = setmean,
